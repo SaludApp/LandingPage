@@ -40,6 +40,7 @@ html, body {
     color: #AB53FF;
     font-size: 28px;
     font-weight: 600;
+    text-align: center;
 }
 
 .subscribe-form-control {
@@ -170,6 +171,7 @@ html, body {
         color: #AB53FF;
         font-size: 34px;
         font-weight: 600;
+        text-align: center;
     }
 
     .subscribe-form-control {
@@ -242,6 +244,81 @@ html, body {
         background-image: radial-gradient(763px 696px at 60rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
             background-repeat: no-repeat;
             padding-top: 4rem;
+    }
+    .salud-logo {
+        width: 35%;
+    }
+
+    .feature-heading {
+        font-size: 40px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 1.0);
+    }
+    .feature-text {
+        font-size: 30px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    #subscribe {
+        margin-top: 50px;
+    }
+
+    #coming-soon {
+        .coming-soon-image {
+            position: absolute;
+            margin-top: -45px;
+            width: 20%;
+        }
+    }
+
+    .subscribe-text {
+        color: #AB53FF;
+        font-size: 34px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .subscribe-form-control {
+        border-radius: 44px 0 0 44px;
+        height: 90px;
+        color: #BDBEC6;
+        font-size: 25px;
+        font-weight: 400;
+        opacity: 1; /* Firefox */
+        padding: 0 0 0 30px;
+    }
+    
+    .subscribe-button {
+        width: 30%;
+        height: 90px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0 44px 44px 0;
+        background: #AB53FF;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 38px;
+        color: #FFFFFF;
+    }
+    
+    .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #BDBEC6;
+        font-size: 25px;
+        font-weight: 400;
+        opacity: 1; /* Firefox */
+    }
+    
+    .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #BDBEC6;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    
+    .form-control::-ms-input-placeholder { /* Microsoft Edge */
+        color: #BDBEC6;
+        font-size: 25px;
+        font-weight: 400;
     }
     #subscribe {
         position: relative;
