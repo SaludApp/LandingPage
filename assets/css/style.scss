@@ -1,1476 +1,312 @@
-/*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
-/*===== VARIABLES CSS =====*/
-:root {
-    --header-height: 3rem;
-    --first-color: #3258A6;
-    --dark-color: #002166;
-    --dark-color-alt: #282B3A;
-    --primary-color: #9B8048;
-    --white-smoke-color: #E6E7E9;
-    --white-color: #fff;
-
-    --body-font: 'Poppins', sans-serif;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --z-fixed: 100;
+html, body {
+    font-family: 'Outfit', system-ui, sans-serif;
 }
 
-:root {
-    @media screen and (min-width: 768px) {
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-    }
+#cover {
+    background-image: radial-gradient(763px 796px at 15rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+        background-repeat: no-repeat;
+        padding-top: 4rem;
 }
 
-/*===== BASE =====*/
-*,
-::before,
-::after {
-    box-sizing: border-box;
-}
-
-body {
-    // background-image: url(../imgs/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: var(--header-height) 0 0 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    font-weight: 500;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-
-
-
-
-/*===== NAV =====*/
-@media screen and (max-width: 780px) {
-    .main {
-
-        #hero {
-            background-image: radial-gradient(763px 696px at 75rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
-            background-repeat: no-repeat;
-            padding-top: 4rem;
-
-            #div1 {
-                #div2 {
-                    .itm1 {
-                        padding: 3rem 0;
-
-                        .para_div {
-                            p {
-                                font-family: 'Outfit';
-                                font-style: normal;
-                                font-weight: 400;
-                                font-size: 29px;
-                                line-height: 63px;
-                                padding: 10px;
-                                color: rgba(0, 0, 0, 0.6);
-                            }
-                        }
-                    }
-
-                    .item2 {
-                        .img1 {
-                            width: 16rem;
-                            position: relative;
-                        }
-
-                        .img2 {
-                            position: absolute;
-                            width: 90px;
-                            height: 90px;
-                            left: 292px;
-                            top: 619px;
-                            transform: rotate(17.1deg);
-
-                        }
-
-                        .img3 {
-                            position: absolute;
-                            width: 89.42px;
-                            height: 89.42px;
-                            left: 1px;
-                            top: 867.13px;
-                            transform: rotate(2.89deg);
-                        }
-                    }
-                }
-            }
-
-            .sec-div2 {
-                position: absolute;
-                width: 100%;
-                // height: 260px;
-                left: 0px;
-                top: 75rem;
-                background: #F7EEFF;
-                padding: 76px 0 69px 0;
-
-                .sec_div2_r1 {
-                    .r1 {
-                        h4 {
-                            font-family: "Outfit";
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 34px;
-                            line-height: 150%;
-                            padding: 10px;
-                            text-align: center;
-                            color: #AB53FF;
-                        }
-                    }
-
-                    .r2 {
-                        padding: 21px 0;
-
-                        form {
-                            padding: 21px;
-
-                            input {
-                                position: absolute;
-                                width: 288.81px;
-                                padding: 30px;
-                                border-radius: 44px;
-                                height: 89px;
-
-                                ::placeholder {
-                                    font-weight: 400;
-                                    font-size: 28px;
-                                    line-height: 135%;
-                                    color: #BDBEC6;
-                                }
-                            }
-
-                            #button-addon2 {
-                                width: 164.53px;
-                                height: 90px;
-                                left: 197.28px;
-                                top: 0px;
-                                border-radius: 44px;
-                                background: #AB53FF;
-                                font-style: normal;
-                                font-weight: 700;
-                                font-size: 20px;
-                                line-height: 38px;
-                                color: #FFFFFF;
-
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        #main_section {
-            background: #FFFC01;
-            margin: 32.2rem 0;
-
-            #section1 {
-
-                padding: 18rem 0 5rem 0;
-
-                .r1 {
-                    #maindiv {
-                        padding: 52px 35px 0 35px;
-
-                        h2 {
-                            font-family: 'Outfit';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 51px;
-                            line-height: 64px;
-                            display: flex;
-                            align-items: center;
-                            color: rgba(0, 0, 0, 0.94);
-                        }
-
-                        p {
-                            font-family: 'Outfit';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 50px;
-                            font-size: 29px;
-                            /* line-height: 71px; */
-                            color: rgba(0, 0, 0, 0.6);
-                            padding: 38px 0 0 0;
-                        }
-                    }
-                }
-
-            }
-
-            #section2 {
-
-                padding: 5rem 0 5rem 0;
-
-                .r1 {
-                    #maindiv {
-                        padding: 52px 35px 0 35px;
-
-                        h2 {
-                            font-family: 'Outfit';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 51px;
-                            line-height: 64px;
-                            display: flex;
-                            align-items: center;
-                            color: rgba(0, 0, 0, 0.94);
-                        }
-
-                        p {
-                            font-family: 'Outfit';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 50px;
-                            font-size: 29px;
-                            /* line-height: 71px; */
-                            color: rgba(0, 0, 0, 0.6);
-                            padding: 12px 0 0 0;
-
-                        }
-                    }
-                }
-
-            }
-
-            #section3 {
-
-                padding: 1rem 0;
-                background: linear-gradient(90deg, rgba(84, 73, 218, 1) 0%, rgba(126, 73, 207, 1) 50%, rgba(180, 74, 192, 1) 100%);
-
-
-                .maindiv {
-                    #div1 {
-                        img {
-
-                            position: absolute;
-                            width: 141px;
-                            top: 262.4rem;
-                            width: 92px;
-                        }
-
-                    }
-
-                    #div2 {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 27px;
-                        line-height: 63px;
-                        text-align: center;
-                        color: #FFFFFF;
-                    }
-                }
-
-            }
-
-            #section4 {
-                padding: 5rem 0 5rem 0;
-
-                .r1 {
-                    .div1 {
-                        h2 {
-                            font-family: 'Outfit';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 50px;
-                            display: flex;
-                            align-items: center;
-                            text-align: center;
-
-                            color: rgba(0, 0, 0, 0.94);
-                        }
-
-                        p {
-                            font-family: 'Outfit';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 34px;
-                            // line-height: 71px;
-                            padding: 10px 0;
-                            text-align: center;
-                            color: rgba(0, 0, 0, 0.6);
-                        }
-                    }
-
-                    .main_div {
-                        .div1 {
-                            background-repeat: no-repeat;
-                            border-radius: 10px;
-                            background-size: 32.2rem;
-
-                            .inner_div1 {
-                                position: relative;
-                                top: -15rem;
-
-                                .sec1 {
-                                    font-family: 'outfit';
-                                    font-style: normal;
-                                    font-weight: 600;
-                                    font-size: 17px;
-                                    line-height: 54px;
-                                    display: flex;
-                                    align-items: flex-end;
-                                    color: #FFFFFF;
-                                }
-
-                                .sec2 {
-                                    font-family: 'outfit';
-                                    font-style: normal;
-                                    font-weight: 600;
-                                    font-size: 17px;
-                                    line-height: 54px;
-                                    display: flex;
-                                    align-items: flex-end;
-                                    color: #FFFFFF;
-                                }
-
-                                .sec3 {
-                                    .item1 {
-                                        font-family: "outfit";
-                                        font-style: normal;
-                                        font-weight: 600;
-                                        font-size: 23px;
-                                        // padding-top: 47px;
-                                        line-height: 34px;
-                                        display: flex;
-                                        align-items: flex-end;
-                                        color: #FFFFFF;
-                                    }
-                                }
-
-                            }
-                        }
-                    }
-                }
-            }
-
-            #section5 {
-
-                padding: 5rem 0 5rem 0;
-
-                .r1 {
-                    .main3itm {
-                        h1 {
-                            .img2 {
-                                display: none;
-                            }
-                        }
-                    }
-
-                    #maindiv {
-                        padding: 52px 35px 0 35px;
-
-                        h2 {
-                            font-family: 'Outfit';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 51px;
-                            line-height: 64px;
-                            display: flex;
-                            align-items: center;
-                            color: rgba(0, 0, 0, 0.94);
-                        }
-
-                        p {
-                            font-family: 'Outfit';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 50px;
-                            font-size: 29px;
-                            /* line-height: 71px; */
-                            color: rgba(0, 0, 0, 0.6);
-                            padding: 12px 0 0 0;
-
-                        }
-                    }
-                }
-
-            }
-
-            .section6 {
-
-                // position: absolute;
-                // width: 100%;
-                // height: 260px;
-                left: 0px;
-                // top: 602px;
-                background: #F7EEFF;
-                padding: 76px 0 69px 0;
-
-                .sec_div2_r1 {
-                    .r1 {
-                        h4 {
-                            font-family: "Outfit";
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 34px;
-                            line-height: 150%;
-                            padding: 10px;
-                            text-align: center;
-                            color: #AB53FF;
-                        }
-                    }
-
-                    .r2 {
-                        padding: 21px 0;
-
-                        form {
-                            padding: 21px;
-
-                            input {
-                                position: absolute;
-                                width: 288.81px;
-                                padding: 30px;
-                                border-radius: 44px;
-                                height: 89px;
-
-                                ::placeholder {
-                                    font-weight: 400;
-                                    font-size: 28px;
-                                    line-height: 135%;
-                                    color: #BDBEC6;
-                                }
-                            }
-
-                            #button-addon2 {
-                                width: 164.53px;
-                                height: 90px;
-                                left: 197.28px;
-                                top: 0px;
-                                border-radius: 44px;
-                                background: #AB53FF;
-                                font-style: normal;
-                                font-weight: 700;
-                                font-size: 20px;
-                                line-height: 38px;
-                                color: #FFFFFF;
-
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
-
-
-    }
-
-    .footer {
-        background-color: #AB53FF;
-        padding: 10px 0 10px 0;
-        margin: -32rem 0;
-
-        .div1 {
-            h4 {
-                font-family: "Outfit";
-                font-style: normal;
-                font-weight: 600;
-                font-size: 27px;
-                line-height: 150%;
-                text-align: center;
-                color: #FFFFFF;
-
-            }
-
-            div {
-                img {
-                    width: 100px;
-                }
-            }
-        }
-    }
-
-}
-
-
-
-/*===== MEDIA QUERIES =====*/
-@media screen and (min-width: 780px) {
-    body {
-        margin: 0;
-    }
-
-
-    // main1
-    .main {
-
-        #hero {
-            background-image: radial-gradient(763px 696px at 75rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
-            background-repeat: no-repeat;
-            padding-top: 4rem;
-
-            #div1 {
-                #div2 {
-                    .itm1 {
-                        padding: 3rem 0;
-
-                        .para_div {
-                            p {
-                                font-family: 'Outfit';
-                                font-style: normal;
-                                font-weight: 400;
-                                font-size: 29px;
-                                line-height: 63px;
-
-                                color: rgba(0, 0, 0, 0.6);
-                            }
-                        }
-                    }
-
-                    .item2 {
-                        .img1 {
-                            width: 20rem;
-                            position: relative;
-                        }
-
-                        .img2 {
-                            position: relative;
-                            /* width: 80px; */
-                            height: 89px;
-                            left: 470px;
-                            top: 30px;
-                            transform: rotate(17.1deg);
-                        }
-
-                        .img3 {
-                            position: relative;
-                            width: 89.42px;
-                            height: 89.42px;
-                            left: 26px;
-                            top: 329.13px;
-                            transform: rotate(2.89deg);
-                        }
-                    }
-                }
-            }
-
-            .sec-div2 {
-                position: absolute;
-                width: 100%;
-                // height: 260px;
-                left: 0px;
-                top: 602px;
-                background: #F7EEFF;
-                padding: 76px 0 69px 0;
-
-                .sec_div2_r1 {
-                    .r1 {
-                        h4 {
-                            font-family: 'Outfit';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 42px;
-                            line-height: 150%;
-                            /* or 63px */
-
-
-                            color: #AB53FF;
-                        }
-                    }
-
-                    .r2 {
-                        padding: 21px 0;
-
-                        form {
-                            input {
-                                position: relative;
-                                /* width: 8.81px; */
-                                border-radius: 44px 0px 0px 44px;
-                                height: 89px px;
-                            }
-
-                            ::placeholder {
-                                font-weight: 400;
-                                font-size: 16px;
-                                padding-left: 10px;
-                                line-height: 11%;
-                                color: #BDBEC6;
-                            }
-                        }
-
-                        #button-addon2 {
-                            width: 260.53px;
-                            height: 90px;
-                            left: 0px;
-                            top: 0px;
-                            border-radius: 0 44px 44px 0;
-                            background: #AB53FF;
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 20px;
-                            line-height: 38px;
-                            color: #FFFFFF;
-
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    #main_section {
-        background: #FFFC01;
-
-        #section1 {
-
-            padding: 18rem 0 5rem 0;
-
-            .r1 {
-                #maindiv {
-                    padding: 51px 0 0 0;
-
-                    h2 {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 51px;
-                        line-height: 64px;
-                        display: flex;
-                        align-items: center;
-                        color: rgba(0, 0, 0, 0.94);
-                    }
-
-                    p {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 50px;
-                        font-size: 29px;
-                        /* line-height: 71px; */
-                        color: rgba(0, 0, 0, 0.6);
-                        padding: 38px 0 0 0;
-                    }
-                }
-            }
-
-        }
-
-        #section2 {
-
-            padding: 5rem 0 5rem 0;
-
-            .r1 {
-                #maindiv {
-                    // padding: 51px 0 0 0;
-
-                    h2 {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 51px;
-                        line-height: 64px;
-                        display: flex;
-                        align-items: center;
-                        color: rgba(0, 0, 0, 0.94);
-                    }
-
-                    p {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 50px;
-                        font-size: 29px;
-                        /* line-height: 71px; */
-                        color: rgba(0, 0, 0, 0.6);
-                        padding: 12px 0 0 0;
-
-                    }
-                }
-            }
-
-        }
-
-        #section3 {
-
-            padding: 1rem 0;
-            background: linear-gradient(90deg, rgba(84, 73, 218, 1) 0%, rgba(126, 73, 207, 1) 50%, rgba(180, 74, 192, 1) 100%);
-
-
-            .maindiv {
-                #div1 {
-                    img {
-                        position: relative;
-                        width: 141px;
-                        top: -3.6rem;
-                        width: 141px;
-                    }
-
-                }
-
-                #div2 {
-                    font-family: 'Outfit';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 50px;
-                    line-height: 63px;
-                    text-align: center;
-                    color: #FFFFFF;
-                }
-            }
-
-        }
-
-        #section4 {
-            padding: 5rem 0 5rem 0;
-            margin: 0 0 -255px 0;
-
-            .r1 {
-                .div1 {
-                    h2 {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 50px;
-                        display: flex;
-                        align-items: center;
-                        text-align: center;
-
-                        color: rgba(0, 0, 0, 0.94);
-                    }
-
-                    p {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 34px;
-                        // line-height: 71px;
-                        padding: 10px 0;
-                        text-align: center;
-                        color: rgba(0, 0, 0, 0.6);
-                    }
-                }
-
-                .main_div {
-                    .div1 {
-                        background-repeat: no-repeat;
-                        border-radius: 10px;
-                        background-size: 32.2rem;
-
-                        .inner_div1 {
-                            position: relative;
-                            top: -18rem;
-
-                            .sec1 {
-                                font-family: 'outfit';
-                                font-style: normal;
-                                font-weight: 600;
-                                font-size: 17px;
-                                line-height: 54px;
-                                display: flex;
-                                align-items: flex-end;
-                                color: #FFFFFF;
-                            }
-
-                            .sec2 {
-                                font-family: 'outfit';
-                                font-style: normal;
-                                font-weight: 600;
-                                font-size: 17px;
-                                line-height: 54px;
-                                display: flex;
-                                align-items: flex-end;
-                                color: #FFFFFF;
-                            }
-
-                            .sec3 {
-                                .item1 {
-                                    font-family: "outfit";
-                                    font-style: normal;
-                                    font-weight: 600;
-                                    font-size: 23px;
-                                    padding-top: 95px;
-                                    line-height: 34px;
-                                    display: flex;
-                                    align-items: flex-end;
-                                    color: #FFFFFF;
-                                }
-                            }
-
-                        }
-                    }
-                }
-            }
-        }
-
-        #section5 {
-
-            padding: 5rem 0 5rem 0;
-
-            .r1 {
-                .main3itm {
-                    h1 {
-                        .img2 {
-
-                            position: relative;
-                            width: 375px;
-                            height: 812px;
-                            left: 254px;
-                            top: -47rem;
-                            overflow-y: scroll;
-                        }
-                    }
-                }
-
-                #maindiv {
-                    // padding: 51px 0 0 0;
-
-                    h2 {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 51px;
-                        line-height: 64px;
-                        display: flex;
-                        align-items: center;
-                        color: rgba(0, 0, 0, 0.94);
-                    }
-
-                    p {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 50px;
-                        font-size: 29px;
-                        /* line-height: 71px; */
-                        color: rgba(0, 0, 0, 0.6);
-                        padding: 12px 0 0 0;
-
-                    }
-                }
-            }
-
-        }
-
-        .section6 {
-
-            // position: absolute;
-            // width: 100%;
-            // height: 260px;
-            left: 0px;
-            // top: 602px;
-            background: #F7EEFF;
-            padding: 76px 0 69px 0;
-            margin: -46rem 0 0 0;
-
-            .sec_div2_r1 {
-                .r1 {
-                    h4 {
-                        font-family: 'Outfit';
-                        font-style: normal;
-                        font-weight: 600;
-                        font-size: 42px;
-                        line-height: 150%;
-                        /* or 63px */
-
-
-                        color: #AB53FF;
-                    }
-                }
-
-                .r2 {
-                    padding: 21px 0;
-
-                    form {
-                        input {
-                            position: relative;
-                            /* width: 8.81px; */
-                            border-radius: 44px 0px 0px 44px;
-                            height: 89px px;
-                        }
-
-                        ::placeholder {
-                            font-weight: 400;
-                            font-size: 16px;
-                            padding-left: 10px;
-                            line-height: 11%;
-                            color: #BDBEC6;
-                        }
-                    }
-
-                    #button-addon2 {
-                        width: 260.53px;
-                        height: 90px;
-                        left: 0px;
-                        top: 0px;
-                        border-radius: 0 44px 44px 0;
-                        background: #AB53FF;
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 20px;
-                        line-height: 38px;
-                        color: #FFFFFF;
-
-                    }
-                }
-            }
-
-        }
-    }
-
-    .footer {
-        background-color: #AB53FF;
-        padding: 126px 0 175px 0;
-
-
-        .div1 {
-            h4 {
-                font-family: 'Outfit';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 42px;
-                line-height: 150%;
-                text-align: center;
-                color: #FFFFFF;
-            }
-
-            div {
-                img {
-                    width: 100px;
-                }
-            }
-        }
-    }
-}
-
-
-
-
-
-
-// footer
-
-
-
-@media screen and(min-width: 1024px) {
-    .bd-grid {
-        margin-left: 14rem;
-        margin-right: auto;
-    }
-}
-
-@media screen and(min-width: 1245) {
-    #section5 {
-
-        padding: 5rem 0 5rem 0;
-
-        .r1 {
-            .main3itm {
-                h1 {
-                    .img2 {
-
-                        position: absolute;
-                        width: 375px;
-                        height: 812px;
-                        left: 1137px;
-                        top: 210rem;
-                        overflow-y: scroll;
-                    }
-                }
-            }
-
-            #maindiv {
-                // padding: 51px 0 0 0;
-
-                h2 {
-                    font-family: 'Outfit';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 51px;
-                    line-height: 64px;
-                    display: flex;
-                    align-items: center;
-                    color: rgba(0, 0, 0, 0.94);
-                }
-
-                p {
-                    font-family: 'Outfit';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 50px;
-                    font-size: 29px;
-                    /* line-height: 71px; */
-                    color: rgba(0, 0, 0, 0.6);
-                    padding: 12px 0 0 0;
-
-                }
-            }
-        }
-
-    }
-}
-
-
-/* ====== DropDown 1======*/
-.sec-center {
-    position: relative;
-    max-width: 100%;
-    text-align: center;
-    z-index: 200;
-}
-
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.dropdown:checked+label,
-.dropdown:not(:checked)+label {
-    position: relative;
-    transition: all 200ms linear;
-    width: 107px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
-    color: #fff;
-}
-
-.dropdown:checked+label:before,
-.dropdown:not(:checked)+label:before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    content: '';
+.salud-logo {
     width: 100%;
-    height: 100%;
-    z-index: -1;
-    cursor: auto;
-    pointer-events: none;
+}
+.hero-text {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.feature-heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+}
+.feature-text {
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
-for_dropdown {
-    color: var(--dark-color);
+#subscribe, #subscribe-footer {
+    background-color: #F7EEFF;
+    height: 260px;
 }
 
-.dropdown {
-    &:checked {
-        &+label {
-            &:before {
-                pointer-events: auto;
-            }
-
-            .uil {
-                transform: rotate(180deg);
-                font-size: 24px;
-                margin-left: 10px;
-                transition: transform 200ms linear;
-            }
-        }
-
-        &~.section-dropdown {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(0);
-        }
-    }
-
-    &:not(:checked) {
-        &+label {
-            .uil {
-                font-size: 24px;
-                margin-left: 10px;
-                transition: transform 200ms linear;
-            }
-        }
-    }
+#subscribe {
+    margin-top: 50px;
 }
 
-.section-dropdown {
-    position: absolute;
-    background-color: var(--dark-color);
-    top: 50px;
-    left: 0;
-    width: 220px;
-    border-radius: 4px;
-    display: block;
-    box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
-    z-index: 2;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(20px);
-    transition: all 200ms linear;
-
-    &:before {
-        position: absolute;
-        top: -20px;
-        left: 0;
-        width: 100%;
-        height: 20px;
-        content: '';
-        display: block;
-        z-index: 1;
-    }
-
-    &:after {
-        position: absolute;
-        top: -7px;
-        left: 30px;
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid #111;
-        content: '';
-        display: block;
-        z-index: 2;
-        transition: all 200ms linear;
-    }
-
-    a {
-        position: relative;
-        color: #fff;
-        transition: all 200ms linear;
-        font-size: 15px;
-        border-radius: 2px;
-        padding: 5px 0;
-        padding-left: 20px;
-        padding-right: 15px;
-        margin: 2px 0;
-        text-align: left;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        &:hover {
-            color: var(--white-color);
-            background-color: var(--first-color);
-        }
-
-        .uil {
-            font-size: 22px;
-        }
-    }
+.subscribe-text {
+    color: #AB53FF;
+    font-size: 28px;
+    font-weight: 600;
 }
 
+.subscribe-form-control {
+    border-radius: 44px 0 0 44px;
+    height: 60px;
+    color: #BDBEC6;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 1; /* Firefox */
+    padding: 0 0 0 20px;
+}
 
+.subscribe-button {
+    width: 30%;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0 44px 44px 0;
+    background: #AB53FF;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
 
-.dropdown-sub:checked+label,
-.dropdown-sub:not(:checked)+label {
-    position: relative;
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #BDBEC6;
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #BDBEC6;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: #BDBEC6;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#current-features, #coming-soon-features {
+    background-color: #FFFC01;
+    padding: 1rem;
+}
+
+#gifting-experience {
+    margin-bottom: 50px;
+}
+#gifting-value {
+    margin-bottom: 50px;
+
+}
+
+#coming-soon {
+    background: linear-gradient(90deg, rgb(84, 73, 218) 0%, rgb(126, 73, 207) 50%, rgb(180, 74, 192) 100%);
     color: #fff;
-    transition: all 200ms linear;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    border-radius: 2px;
-    padding: 5px 0;
-    padding-left: 20px;
-    padding-right: 15px;
-    text-align: left;
-    text-decoration: none;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    justify-content: space-between;
-    -ms-flex-pack: distribute;
-    cursor: pointer;
-}
-
-.dropdown-sub:checked+label .uil,
-.dropdown-sub:not(:checked)+label .uil {
-    font-size: 22px;
-}
-
-.dropdown-sub {
-    &:not(:checked) {
-        &+label {
-            .uil {
-                transition: transform 200ms linear;
-            }
-        }
-    }
-
-    &:checked {
-        &+label {
-            .uil {
-                transform: rotate(135deg);
-                transition: transform 200ms linear;
-            }
-        }
-
-        &~.section-dropdown-sub {
-            pointer-events: auto;
-            opacity: 1;
-            max-height: 999px;
-        }
+    font-size: 40px;
+    font-weight: 600;
+    .coming-soon-image {
+        position: absolute;
+        margin-top: -45px;
+        width: 29%;
     }
 }
 
-.dropdown-sub:checked+label:hover,
-.dropdown-sub:not(:checked)+label:hover {
-    color: #102770;
-    background-color: #ffeba7;
-}
+#suggestions {
+    color: #fff;
+    
+    .card {
+        background-color: #FFFC01;
+        border: 0px;
 
-.section-dropdown-sub {
-    position: relative;
-    display: block;
-    width: 100%;
-    pointer-events: none;
-    opacity: 0;
-    max-height: 0;
-    padding-left: 10px;
-    padding-right: 3px;
-    overflow: hidden;
-    transition: all 200ms linear;
+        .card-title {
+            font-size: 17px;
+        }
 
-    a {
-        font-size: 14px;
-
-        .uil {
+        .card-text {
             font-size: 20px;
         }
     }
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #cover {
+        background-image: radial-gradient(763px 696px at 20rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+            background-repeat: no-repeat;
+            padding-top: 4rem;
+    }
 
-// Dropdwon 2
-.sec-center2 {
-    position: relative;
-    max-width: 100%;
-    text-align: center;
-    z-index: 200;
-}
+    .salud-logo {
+        width: 65%;
+    }
 
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
-    opacity: 0;
-    pointer-events: none;
-}
+    .hero-text {
+        font-size: 45px;
+        color: rgba(0, 0, 0, 0.6);
+    }
 
-.dropdown2:checked+label,
-.dropdown2:not(:checked)+label {
-    position: relative;
-    transition: all 200ms linear;
-    width: 107px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
-    color: #fff;
-}
+    .feature-heading {
+        font-size: 40px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 1.0);
+    }
+    .feature-text {
+        font-size: 40px;
+        color: rgba(0, 0, 0, 0.6);
+    }
 
-.dropdown2:checked+label:before,
-.dropdown2:not(:checked)+label:before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    cursor: auto;
-    pointer-events: none;
-}
+    #subscribe {
+        margin-top: 50px;
+    }
 
-.dropdown2 {
-    &:checked {
-        &+label {
-            &:before {
-                pointer-events: auto;
-            }
-
-            .uil {
-                transform: rotate(180deg);
-                font-size: 24px;
-                margin-left: 10px;
-                transition: transform 200ms linear;
-            }
-        }
-
-        &~.section-dropdown2 {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(0);
+    #coming-soon {
+        .coming-soon-image {
+            position: absolute;
+            margin-top: -45px;
+            width: 20%;
         }
     }
 
-    &:not(:checked) {
-        &+label {
-            .uil {
-                font-size: 24px;
-                margin-left: 10px;
-                transition: transform 200ms linear;
-            }
+    .subscribe-text {
+        color: #AB53FF;
+        font-size: 34px;
+        font-weight: 600;
+    }
+
+    .subscribe-form-control {
+        border-radius: 44px 0 0 44px;
+        height: 90px;
+        color: #BDBEC6;
+        font-size: 25px;
+        font-weight: 400;
+        opacity: 1; /* Firefox */
+        padding: 0 0 0 30px;
+    }
+    
+    .subscribe-button {
+        width: 30%;
+        height: 90px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0 44px 44px 0;
+        background: #AB53FF;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 38px;
+        color: #FFFFFF;
+    }
+    
+    .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #BDBEC6;
+        font-size: 25px;
+        font-weight: 400;
+        opacity: 1; /* Firefox */
+    }
+    
+    .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #BDBEC6;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    
+    .form-control::-ms-input-placeholder { /* Microsoft Edge */
+        color: #BDBEC6;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #cover {
+        background-image: radial-gradient(763px 696px at 50rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+            background-repeat: no-repeat;
+            padding-top: 4rem;
+    }
+    #subscribe {
+        margin-top: 50px;
+    }
+
+    #coming-soon {
+        .coming-soon-image {
+            position: absolute;
+            margin-top: -45px;
+            width: 15%;
         }
     }
 }
 
-.section-dropdown2 {
-    position: absolute;
-    background-color: var(--dark-color);
-    top: 50px;
-    left: 0;
-    width: 220px;
-    border-radius: 4px;
-    display: block;
-    box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
-    z-index: 2;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(20px);
-    transition: all 200ms linear;
-
-    &:before {
-        position: absolute;
-        top: -20px;
-        left: 0;
-        width: 100%;
-        height: 20px;
-        content: '';
-        display: block;
-        z-index: 1;
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #cover {
+        background-image: radial-gradient(763px 696px at 60rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+            background-repeat: no-repeat;
+            padding-top: 4rem;
     }
-
-    &:after {
-        position: absolute;
-        top: -7px;
-        left: 30px;
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid #111;
-        content: '';
-        display: block;
-        z-index: 2;
-        transition: all 200ms linear;
-    }
-
-    a {
+    #subscribe {
         position: relative;
-        color: #fff;
-        transition: all 200ms linear;
-        font-size: 15px;
-        border-radius: 2px;
-        padding: 5px 0;
-        padding-left: 20px;
-        padding-right: 15px;
-        margin: 2px 0;
-        text-align: left;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        margin-top: -100px;
+        z-index: 9;
+    }
 
-        &:hover {
-            color: var(--white-color);
-            background-color: var(--first-color);
-        }
-
-        .uil {
-            font-size: 22px;
+    #coming-soon {
+        .coming-soon-image {
+            position: absolute;
+            margin-top: -45px;
+            width: 11%;
         }
     }
 }
 
-
-
-.dropdown2-sub:checked+label,
-.dropdown2-sub:not(:checked)+label {
-    position: relative;
-    color: #fff;
-    transition: all 200ms linear;
-    font-weight: 500;
-    font-size: 15px;
-    border-radius: 2px;
-    padding: 5px 0;
-    padding-left: 20px;
-    padding-right: 15px;
-    text-align: left;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.dropdown2-sub:checked+label .uil,
-.dropdown2-sub:not(:checked)+label .uil {
-    font-size: 22px;
-}
-
-.dropdown-sub {
-    &:not(:checked) {
-        &+label {
-            .uil {
-                transition: transform 200ms linear;
-            }
-        }
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #cover {
+        background-image: radial-gradient(763px 696px at 60rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+            background-repeat: no-repeat;
+            padding-top: 4rem;
     }
-
-    &:checked {
-        &+label {
-            .uil {
-                transform: rotate(135deg);
-                transition: transform 200ms linear;
-            }
-        }
-
-        &~.section-dropdown-sub {
-            pointer-events: auto;
-            opacity: 1;
-            max-height: 999px;
+    #subscribe {
+        position: relative;
+        margin-top: -100px;
+        z-index: 9;
+    }
+    #coming-soon {
+        .coming-soon-image {
+            position: absolute;
+            margin-top: -45px;
+            width: 10%;
         }
     }
 }
 
-.dropdown-sub:checked+label:hover,
-.dropdown-sub:not(:checked)+label:hover {
-    color: #102770;
-    background-color: #ffeba7;
-}
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    #cover {
+        background-image: radial-gradient(763px 696px at 70rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+            background-repeat: no-repeat;
+            padding-top: 4rem;
+    }
+    #subscribe {
+        position: relative;
+        margin-top: -100px;
+        z-index: 9;
+    }
+    #subscribe, #subscribe-footer {
+        background-color: #F7EEFF;
+        height: 260px;
+    
+        .subscribe-text {
+            color: #AB53FF;
+            font-size: 40px;
+            font-weight: 600;
+        }
+    }
 
-.section-dropdown-sub {
-    position: relative;
-    display: block;
-    width: 100%;
-    pointer-events: none;
-    opacity: 0;
-    max-height: 0;
-    padding-left: 10px;
-    padding-right: 3px;
-    overflow: hidden;
-    transition: all 200ms linear;
-
-    a {
-        font-size: 14px;
-
-        .uil {
-            font-size: 20px;
+    #coming-soon {
+        .coming-soon-image {
+            position: absolute;
+            margin-top: -45px;
+            width: 8%;
         }
     }
 }
