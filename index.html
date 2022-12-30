@@ -1,109 +1,169 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Salud</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    </head>
-    <body>
-        <div class="container-fluid px-0">
-            <section id="cover">
-                <div id="hero" class="row g-0">
-                    <div class="col-lg-8 col-sm-12 col-12 d-flex flex-column mt-5">
-                        <img class="mb-3 img-fluid salud-logo mx-auto" src="assets/imgs/Salud.png" alt="">
-                        <p class="text-center hero-text my-5 my-md-0 mx-2">The easy, fun and flexible <br> new way to gift</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="assets/imgs/cover.svg" class="img-fluid mx-auto d-block" alt="">
-                    </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function submitData() {
+            $.ajax({
+                url: 'https://eo6vxboq0h2ufih.m.pipedream.net',
+                type: 'POST',
+                // dataType: 'json',
+                contentType: 'application/json',
+                headers: {
+                    'Authorization': 'apikey 123456'
+                },
+                data: {
+                    "email_address": document.getElementById('email-field').value ? document.getElementById('email-field').value : document.getElementById('email-field-footer').value,
+                    "status": "subscribed"
+                },
+                success: function (response) {
+                    // handle the successful response from the Mailchimp API
+                    // alert(response)
+                    var subscribe = document.getElementById("subscribe");
+                    var subscribeFooter = document.getElementById("subscribe-footer");
+                    subscribe.classList.add("no-show");
+                    subscribeFooter.classList.add("no-show");
+                    document.getElementById('email-field').value = "Form submitted successfully!";
+                    var thanks = document.getElementById("thanks");
+                    thanks.classList.remove("thanks-div");
+                    thanks.classList.add("thanks-div-show");
+                    document.querySelector('#thanks').scrollIntoView({
+                        behavior: 'smooth',
+                        block: "center"
+                    });
+                },
+                error: function (response) {
+                    // handle the error response from the Mailchimp API
+                    console.log(response)
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid px-0">
+        <section id="cover">
+            <div id="hero" class="row g-0">
+                <div class="col-lg-8 col-sm-12 col-12 d-flex flex-column mt-5">
+                    <img class="mb-3 img-fluid salud-logo mx-auto" src="assets/imgs/Salud.png" alt="">
+                    <p id="send" class="text-center hero-text my-5 my-md-0 mx-2">The easy, fun and flexible <br> new way
+                        to gift
+                    </p>
                 </div>
-                <div id="subscribe" class="row subscribe g-0">
-                    <div class="col-lg-5 align-self-center px-5 mt-2">
-                        <p class="subscribe-text">Get updates and $10 gifting value at launch</p> 
-                    </div>
-                    <div class="col-lg-7 align-self-center px-5">
-                        <form action="" method="POST" enctype="multipart/form-data">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control subscribe-form-control" placeholder="Your email address" aria-label="Your email address" aria-describedby="subscribe-button">
-                                <button class="btn btn-outline-secondary subscribe-button" type="submit">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+                <div class="col-lg-4">
+                    <img src="assets/imgs/cover.svg" class="img-fluid mx-auto d-block" alt="">
                 </div>
-            </section>
-            <section id="current-features">
-                <div class="row d-flex flex-row g-0 mt-5" id="gifting-experience">
-                    <div class="col-lg-6 col-sm-12 col-12 align-self-center order-2 order-lg-1 justify-content-center">
-                        <img class="img-fluid mx-auto d-block my-5" src="assets/imgs/snap-video-message.png" style="filter: drop-shadow(13px 15px 22px rgba(0,0,0, 0.4)); width: 50%;" alt="">
-                    </div>
-                    <div class="col-lg-6 align-self-center order-1 order-lg-2 px-lg-5">
-                        <img class="mb-2" src="assets/imgs/snapchat.svg" style="filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.4)); margin-left: -1em; width: 15%;" alt="">
-                        <h2 class="feature-heading">Create Personal Gift Experiences</h2>
-                        <p class="feature-text">Powered by Snapchat. Include videos, pictures, gifs, stickers, filters & more!</p>
-                    </div>
+            </div>
+            <div id="subscribe" class="row subscribe g-0">
+                <div class="col-lg-5 align-self-center px-5 mt-2">
+                    <p class="subscribe-text">Get updates and $10 gifting value at launch</p>
                 </div>
-                <div class="row d-flex flex-row g-0 mt-5 p-lg" id="gifting-value">
-                    <div class="col-lg-6 col-sm-12 col-12 align-self-center justify-content-center">
-                        <img src="assets/imgs/card.svg" style="filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.4)); width: 15%" class="mb-4" alt="">
-                        <h2 class="feature-heading text-left">Spend Gifted Value Anywhere</h2>
-                        <p class="feature-text text-left">Online using your Salud Digital Card or in-store through your mobile wallet</p>
-                    </div>
-                    <div class="col-lg-6 align-self-center px-lg-5">
-                        <img src="assets/imgs/salud-card.png" style="filter: drop-shadow(13px 15px 22px #AB53FF);" class="img-fluid mx-auto my-5 my-lg-0 d-none d-md-block"  alt="">
-                        <img src="assets/imgs/card-mobile.svg" class="img-fluid mx-auto my-5 my-lg-0 d-block d-md-none" alt="">
-                    </div>
-                </div>
-            </section>
-            <section id="coming-soon" class="g-0">
-                <img class="img-fluid coming-soon-image" src="assets/imgs/coming-soon.png" alt="">
-                <div class="row py-5">
-                    <div class="col-md-12 text-center">Coming Soon</div>
-                </div>
-            </section>
-            <section id="coming-soon-features">
-                <div id="suggestions">
-                    <div class="row g-0 mt-5">
-                        <div class="col-md-12 text-left text-md-center">
-                            <img src="assets/imgs/Rectangle1.png"  alt="">
+                <div class="col-lg-7 align-self-center px-5">
+                    <form action="#" onsubmit="submitData()">
+                        <div class="input-group mb-3">
+                            <input id="email-field" type="text" class="form-control subscribe-form-control"
+                                placeholder="Your email address" aria-label="Your email address"
+                                aria-describedby="subscribe-button">
+                            <button id="submit" class="btn btn-outline-secondary subscribe-button"
+                                type="submit">Submit</button>
                         </div>
-                        <h2 class="col-sm-12 col-md-4 offset-md-4 text-left text-md-center feature-heading">Suggest Products and Experiences</h2>
-                        <p class="col-sm-12 col-md-4 offset-md-4 text-left text-md-center feature-text">while giving your receiver the flexibility to get what they want</p>
+                    </form>
+                </div>
+            </div>
+            <div id="thanks" class="thanks-div">
+                <p class="mt-2 text-center subscribe-text">Form submitted successfully!</p>
+            </div>
+        </section>
+        <section id="current-features">
+            <div class="row d-flex flex-row g-0 mt-5" id="gifting-experience">
+                <div class="col-lg-6 col-sm-12 col-12 align-self-center order-2 order-lg-1 justify-content-center">
+                    <img class="img-fluid mx-auto d-block my-5" src="assets/imgs/snap-video-message.png"
+                        style="filter: drop-shadow(13px 15px 22px rgba(0,0,0, 0.4)); width: 50%;" alt="">
+                </div>
+                <div class="col-lg-6 align-self-center order-1 order-lg-2 px-lg-5">
+                    <img class="mb-2" src="assets/imgs/snapchat.svg"
+                        style="filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.4)); margin-left: -0.5em; width: 15%;" alt="">
+                    <h2 class="feature-heading">Create Personal Gift Experiences</h2>
+                    <p class="feature-text">Powered by Snapchat. Include videos, pictures, gifs, stickers, filters &
+                        more!</p>
+                </div>
+            </div>
+            <div class="row d-flex flex-row g-0 mt-5 p-lg" id="gifting-value">
+                <div class="col-lg-6 col-sm-12 col-12 align-self-center justify-content-center">
+                    <img src="assets/imgs/card.svg" style="filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.4)); width: 15%"
+                        class="mb-4" alt="">
+                    <h2 class="feature-heading text-left">Spend Gifted Value Anywhere</h2>
+                    <p class="feature-text text-left">Online using your Salud Digital Card or in-store through your
+                        mobile wallet</p>
+                </div>
+                <div class="col-lg-6 align-self-center px-lg-5">
+                    <img src="assets/imgs/salud-card.png" style="filter: drop-shadow(13px 15px 22px #AB53FF);"
+                        class="img-fluid mx-auto my-5 my-lg-0 d-none d-md-block" alt="">
+                    <img src="assets/imgs/card-mobile.svg" class="img-fluid mx-auto my-5 my-lg-0 d-block d-md-none"
+                        alt="">
+                </div>
+            </div>
+        </section>
+        <section id="coming-soon" class="g-0">
+            <img class="img-fluid coming-soon-image" src="assets/imgs/coming-soon.png" alt="">
+            <div class="row py-5">
+                <div class="col-md-12 text-center">Coming Soon</div>
+            </div>
+        </section>
+        <section id="coming-soon-features">
+            <div id="suggestions">
+                <div class="row g-0 mt-5">
+                    <div class="col-md-12 text-left text-md-center">
+                        <img src="assets/imgs/Rectangle1.png" alt="">
                     </div>
-                    <div class="row g-0 p-lg">
-                        <div class="card col-lg-4 mt-3 px-2 img-fluid">
-                            <img class="card-img-top" src="assets/imgs/slider-1.png" alt="Card image" style="width:100%">
-                            <div class="card-img-overlay">
-                                <h4 class="card-title d-flex mb-3">
-                                    <span><img src="assets/imgs/Ellipse13.png" alt=""> &nbsp;&nbsp;&nbsp;Peter Madison</span>
-                                    <span class="ms-auto p-3"> $ 300</span>
-                                </h4>
-                                <p class="card-text mt-5 text-center">Helicopter Tour of New York City</p>
-                            </div>
-                        </div>
-                        <div class="card col-lg-4 mt-3 px-2 img-fluid">
-                            <img class="card-img-top" src="assets/imgs/slider-2.png" alt="Card image" style="width:100%">
-                            <div class="card-img-overlay">
-                                <h4 class="card-title d-flex mb-3">
-                                    <span><img src="assets/imgs/Ellipse14.png" alt=""> &nbsp;&nbsp;&nbsp;Maritza Parra</span>
-                                    <span class="ms-auto p-3"> $ 75</span>
-                                </h4>
-                                <p class="card-text mt-5 text-center">Nirvana Spa Day</p>
-                            </div>
-                        </div>
-                        <div class="card col-lg-4 mt-3 px-2 img-fluid">
-                            <img class="card-img-top" src="assets/imgs/slider-3.png" alt="Card image" style="width:100%">
-                            <div class="card-img-overlay">
-                                <h4 class="card-title d-flex mb-3">
-                                    <span><img src="assets/imgs/Ellipse15.png" alt=""> &nbsp;&nbsp;&nbsp;Kate King</span>
-                                    <span class="ms-auto p-3"> $ 245</span>
-                                </h4>
-                                <p class="card-text mt-5 text-center">Spotify Subscription</p>
-                            </div>
+                    <h2 class="col-sm-12 col-md-4 offset-md-4 text-left text-md-center feature-heading">Suggest Products
+                        and Experiences</h2>
+                    <p class="col-sm-12 col-md-4 offset-md-4 text-left text-md-center feature-text">while giving your
+                        receiver the flexibility to get what they want</p>
+                </div>
+                <div class="row g-0 p-lg">
+                    <div class="card col-lg-4 mt-3 px-2 img-fluid">
+                        <img class="card-img-top" src="assets/imgs/slider-1.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title d-flex mb-3">
+                                <span><img src="assets/imgs/Ellipse13.png" alt=""> &nbsp;&nbsp;&nbsp;Peter
+                                    Madison</span>
+                                <span class="ms-auto p-3"> $ 300</span>
+                            </h4>
+                            <p class="card-text mt-5 text-center">Helicopter Tour of New York City</p>
                         </div>
                     </div>
-                    <!-- <div class="row g-0 d-block d-md-none">
+                    <div class="card col-lg-4 mt-3 px-2 img-fluid">
+                        <img class="card-img-top" src="assets/imgs/slider-2.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title d-flex mb-3">
+                                <span><img src="assets/imgs/Ellipse14.png" alt=""> &nbsp;&nbsp;&nbsp;Maritza
+                                    Parra</span>
+                                <span class="ms-auto p-3"> $ 75</span>
+                            </h4>
+                            <p class="card-text mt-5 text-center">Nirvana Spa Day</p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-4 mt-3 px-2 img-fluid">
+                        <img class="card-img-top" src="assets/imgs/slider-3.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title d-flex mb-3">
+                                <span><img src="assets/imgs/Ellipse15.png" alt=""> &nbsp;&nbsp;&nbsp;Kate King</span>
+                                <span class="ms-auto p-3"> $ 245</span>
+                            </h4>
+                            <p class="card-text mt-5 text-center">Spotify Subscription</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row g-0 d-block d-md-none">
                         <div class="card col-lg-4 mt-3 px-2 img-fluid">
                             <img class="card-img-top" src="assets/imgs/slider-4.png" alt="Card image" style="width:100%">
                             <div class="card-img-overlay">
@@ -115,47 +175,54 @@
                             </div>
                         </div>
                     </div> -->
-                </div>
-                <div id="wishlist" class="mt-5">
-                    <div class="row pt-5 g-0">
-                        <div class="col-lg-4 align-self-center px-lg-5">
-                            <img src="assets/imgs/wishlist.png" alt="">
-                            <h2 class="feature-heading">Share your Wish List and Occasions</h2>
-                            <p class="feature-text">So friends know what to get you and when to get it</p>
-                        </div>
-                        <div class="col-lg-8 col-sm-12 col-12 text-center d-flex flex-row flex-wrap mb-5">
-                            <img class="img-fluid d-block mx-auto my-5 my-md-0" src="assets/imgs/card2.png" alt="">
-                            <div class="d-none d-lg-block mt-md-5" style="position: relative; margin-left: -300px; margin-top: 140px !important">
-                                <img class="img-fluid" src="assets/imgs/card1.png" alt="">
-                            </div>
+            </div>
+            <div id="wishlist" class="mt-5">
+                <div class="row pt-5 g-0">
+                    <div class="col-lg-4 align-self-center px-lg-5">
+                        <img src="assets/imgs/wishlist.png" alt="">
+                        <h2 class="feature-heading">Share your Wish List and Occasions</h2>
+                        <p class="feature-text">So friends know what to get you and when to get it</p>
+                    </div>
+                    <div class="col-lg-8 col-sm-12 col-12 text-center d-flex flex-row flex-wrap mb-5">
+                        <img class="img-fluid d-block mx-auto my-5 my-md-0" src="assets/imgs/card2.png" alt="">
+                        <div class="d-none d-lg-block mt-md-5"
+                            style="position: relative; margin-left: -300px; margin-top: 140px !important">
+                            <img class="img-fluid" src="assets/imgs/card1.png" alt="">
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="subscribe-footer" class="row subscribe g-0">
-                <div class="col-lg-5 align-self-center px-5 mt-2">
-                    <p class="subscribe-text text-center text-lg-left">Get updates and $10 gifting value at launch</p> 
-                </div>
-                <div class="col-lg-7 align-self-center px-5">
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control subscribe-form-control" placeholder="Your email address" aria-label="Your email address" aria-describedby="subscribe-button">
-                            <button class="btn btn-outline-secondary subscribe-button" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <footer class="row py-5 g-0" style="background-color: #AB53FF;">
-                <h4 class="col-md-12 text-center p-5" style="color: white; font-size: 30px">Follow us to get updates and keep in touch!</h4>
-                <div class="col-md-12 text-center pb-5">
-                    <a href="#"><img class="img-fluid" src="assets/imgs/fb.png" style="width: 90px;" alt="Facebook"></a>
-                    <a href="#"><img class="img-fluid" src="assets/imgs/insta.png" style="width: 90px;" alt="Instagram"></a>
-                    <a href="#"><img class="img-fluid" src="assets/imgs/snap.png" style="width: 90px;" alt="Snapchat"></a>
-                    <a href="#"><img class="img-fluid" src="assets/imgs/tiktok.png" style="width: 90px;" alt="Tiktok"></a>
-                </div>
-            </footer>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    </body>
+            </div>
+        </section>
+        <section id="subscribe-footer" class="row subscribe g-0">
+            <div class="col-lg-5 align-self-center px-5 mt-2">
+                <p class="subscribe-text text-center text-lg-left">Get updates and $10 gifting value at launch</p>
+            </div>
+            <div class="col-lg-7 align-self-center px-5">
+                <form action="#" onsubmit="submitData()">
+                    <div class="input-group mb-3">
+                        <input id="email-field-footer" type="text" class="form-control subscribe-form-control" placeholder="Your email address"
+                            aria-label="Your email address" aria-describedby="subscribe-button">
+                        <button id="submit" class="btn btn-outline-secondary subscribe-button"
+                            type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="row py-5 g-0" style="background-color: #AB53FF;">
+            <h4 class="col-md-12 text-center p-5" style="color: white; font-size: 30px">Follow us to get updates and
+                keep in touch!</h4>
+            <div class="col-md-12 text-center pb-5">
+                <a href="#"><img class="img-fluid" src="assets/imgs/fb.png" style="width: 90px;" alt="Facebook"></a>
+                <a href="#"><img class="img-fluid" src="assets/imgs/insta.png" style="width: 90px;" alt="Instagram"></a>
+                <a href="#"><img class="img-fluid" src="assets/imgs/snap.png" style="width: 90px;" alt="Snapchat"></a>
+                <a href="#"><img class="img-fluid" src="assets/imgs/tiktok.png" style="width: 90px;" alt="Tiktok"></a>
+            </div>
+        </footer>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script> -->
+</body>
+
 </html>
