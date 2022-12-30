@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 
-html, body {
-    font-family: 'Outfit', system-ui, sans-serif;
+html,
+body {
+    font-family: "Outfit", system-ui, sans-serif;
     overflow-x: hidden;
 }
 
 #cover {
     background-image: radial-gradient(763px 796px at 15rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
-        background-repeat: no-repeat;
-        padding-top: 4rem;
+    background-repeat: no-repeat;
+    padding-top: 4rem;
 }
 
 .salud-logo {
@@ -21,15 +22,16 @@ html, body {
 .feature-heading {
     font-size: 30px;
     font-weight: 600;
-    color: rgba(0, 0, 0, 1.0);
+    color: rgba(0, 0, 0, 1);
 }
 .feature-text {
     font-size: 26px;
     color: rgba(0, 0, 0, 0.6);
 }
 
-#subscribe, #subscribe-footer {
-    background-color: #F7EEFF;
+#subscribe,
+#subscribe-footer {
+    background-color: #f7eeff;
     height: 260px;
 }
 
@@ -37,8 +39,23 @@ html, body {
     margin-top: 50px;
 }
 
+.no-show {
+    display: none;
+}
+
+.thanks-div {
+    display: none;
+}
+
+.thanks-div-show {
+    display: block;
+    background-color: #f7eeff;
+    height: 100px;
+    line-height: 100px;
+}
+
 .subscribe-text {
-    color: #AB53FF;
+    color: #ab53ff;
     font-size: 28px;
     font-weight: 600;
     text-align: center;
@@ -47,7 +64,7 @@ html, body {
 .subscribe-form-control {
     border-radius: 44px 0 0 44px;
     height: 60px;
-    color: #BDBEC6;
+    color: #bdbec6;
     font-size: 18px;
     font-weight: 400;
     opacity: 1; /* Firefox */
@@ -60,35 +77,39 @@ html, body {
     left: 0px;
     top: 0px;
     border-radius: 0 44px 44px 0;
-    background: #AB53FF;
+    background: #ab53ff;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 38px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #BDBEC6;
+.form-control::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #bdbec6;
     font-size: 20px;
     font-weight: 400;
     opacity: 1; /* Firefox */
 }
 
-.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #BDBEC6;
+.form-control:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #bdbec6;
     font-size: 20px;
     font-weight: 400;
 }
 
-.form-control::-ms-input-placeholder { /* Microsoft Edge */
-    color: #BDBEC6;
+.form-control::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #bdbec6;
     font-size: 20px;
     font-weight: 400;
 }
 
-#current-features, #coming-soon-features {
-    background-color: #FFFC01;
+#current-features,
+#coming-soon-features {
+    background-color: #fffc01;
     padding: 1rem;
 }
 
@@ -97,7 +118,6 @@ html, body {
 }
 #gifting-value {
     margin-bottom: 50px;
-
 }
 
 #coming-soon {
@@ -114,9 +134,9 @@ html, body {
 
 #suggestions {
     color: #fff;
-    
+
     .card {
-        background-color: #FFFC01;
+        background-color: #fffc01;
         border: 0px;
 
         .card-title {
@@ -132,9 +152,13 @@ html, body {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     #cover {
-        background-image: radial-gradient(763px 696px at 20rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
-            background-repeat: no-repeat;
-            padding-top: 4rem;
+        background-image: radial-gradient(
+            763px 696px at 20rem center,
+            rgba(255, 252, 0, 0.52) 0%,
+            rgb(255, 255, 255) 60%
+        );
+        background-repeat: no-repeat;
+        padding-top: 4rem;
     }
 
     .salud-logo {
@@ -149,7 +173,7 @@ html, body {
     .feature-heading {
         font-size: 40px;
         font-weight: 600;
-        color: rgba(0, 0, 0, 1.0);
+        color: rgba(0, 0, 0, 1);
     }
     .feature-text {
         font-size: 40px;
@@ -169,7 +193,7 @@ html, body {
     }
 
     .subscribe-text {
-        color: #AB53FF;
+        color: #ab53ff;
         font-size: 34px;
         font-weight: 600;
         text-align: center;
@@ -178,42 +202,45 @@ html, body {
     .subscribe-form-control {
         border-radius: 44px 0 0 44px;
         height: 90px;
-        color: #BDBEC6;
+        color: #bdbec6;
         font-size: 25px;
         font-weight: 400;
         opacity: 1; /* Firefox */
         padding: 0 0 0 30px;
     }
-    
+
     .subscribe-button {
         width: 30%;
         height: 90px;
         left: 0px;
         top: 0px;
         border-radius: 0 44px 44px 0;
-        background: #AB53FF;
+        background: #ab53ff;
         font-style: normal;
         font-weight: 700;
         font-size: 25px;
         line-height: 38px;
-        color: #FFFFFF;
+        color: #ffffff;
     }
-    
-    .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #BDBEC6;
+
+    .form-control::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #bdbec6;
         font-size: 25px;
         font-weight: 400;
         opacity: 1; /* Firefox */
     }
-    
-    .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: #BDBEC6;
+
+    .form-control:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #bdbec6;
         font-size: 25px;
         font-weight: 400;
     }
-    
-    .form-control::-ms-input-placeholder { /* Microsoft Edge */
-        color: #BDBEC6;
+
+    .form-control::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #bdbec6;
         font-size: 25px;
         font-weight: 400;
     }
@@ -222,9 +249,13 @@ html, body {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
     #cover {
-        background-image: radial-gradient(763px 696px at 50rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
-            background-repeat: no-repeat;
-            padding-top: 4rem;
+        background-image: radial-gradient(
+            763px 696px at 50rem center,
+            rgba(255, 252, 0, 0.52) 0%,
+            rgb(255, 255, 255) 60%
+        );
+        background-repeat: no-repeat;
+        padding-top: 4rem;
     }
     #subscribe {
         margin-top: 50px;
@@ -242,9 +273,13 @@ html, body {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     #cover {
-        background-image: radial-gradient(763px 696px at 60rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
-            background-repeat: no-repeat;
-            padding-top: 4rem;
+        background-image: radial-gradient(
+            763px 696px at 60rem center,
+            rgba(255, 252, 0, 0.52) 0%,
+            rgb(255, 255, 255) 60%
+        );
+        background-repeat: no-repeat;
+        padding-top: 4rem;
     }
     .salud-logo {
         width: 35%;
@@ -253,7 +288,7 @@ html, body {
     .feature-heading {
         font-size: 40px;
         font-weight: 600;
-        color: rgba(0, 0, 0, 1.0);
+        color: rgba(0, 0, 0, 1);
     }
     .feature-text {
         font-size: 30px;
@@ -273,7 +308,7 @@ html, body {
     }
 
     .subscribe-text {
-        color: #AB53FF;
+        color: #ab53ff;
         font-size: 34px;
         font-weight: 600;
         text-align: left;
@@ -282,42 +317,45 @@ html, body {
     .subscribe-form-control {
         border-radius: 44px 0 0 44px;
         height: 90px;
-        color: #BDBEC6;
+        color: #bdbec6;
         font-size: 25px;
         font-weight: 400;
         opacity: 1; /* Firefox */
         padding: 0 0 0 30px;
     }
-    
+
     .subscribe-button {
         width: 30%;
         height: 90px;
         left: 0px;
         top: 0px;
         border-radius: 0 44px 44px 0;
-        background: #AB53FF;
+        background: #ab53ff;
         font-style: normal;
         font-weight: 700;
         font-size: 25px;
         line-height: 38px;
-        color: #FFFFFF;
+        color: #ffffff;
     }
-    
-    .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #BDBEC6;
+
+    .form-control::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #bdbec6;
         font-size: 25px;
         font-weight: 400;
         opacity: 1; /* Firefox */
     }
-    
-    .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: #BDBEC6;
+
+    .form-control:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #bdbec6;
         font-size: 25px;
         font-weight: 400;
     }
-    
-    .form-control::-ms-input-placeholder { /* Microsoft Edge */
-        color: #BDBEC6;
+
+    .form-control::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #bdbec6;
         font-size: 25px;
         font-weight: 400;
     }
@@ -334,14 +372,22 @@ html, body {
             width: 11%;
         }
     }
+    .p-lg {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
 }
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     #cover {
-        background-image: radial-gradient(763px 696px at 60rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
-            background-repeat: no-repeat;
-            padding-top: 4rem;
+        background-image: radial-gradient(
+            763px 696px at 60rem center,
+            rgba(255, 252, 0, 0.52) 0%,
+            rgb(255, 255, 255) 60%
+        );
+        background-repeat: no-repeat;
+        padding-top: 4rem;
     }
     #subscribe {
         position: relative;
@@ -355,26 +401,35 @@ html, body {
             width: 10%;
         }
     }
+    .p-lg {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
     #cover {
-        background-image: radial-gradient(763px 696px at 70rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
-            background-repeat: no-repeat;
-            padding-top: 4rem;
+        background-image: radial-gradient(
+            763px 696px at 70rem center,
+            rgba(255, 252, 0, 0.52) 0%,
+            rgb(255, 255, 255) 60%
+        );
+        background-repeat: no-repeat;
+        padding-top: 4rem;
     }
     #subscribe {
         position: relative;
         margin-top: -100px;
         z-index: 9;
     }
-    #subscribe, #subscribe-footer {
-        background-color: #F7EEFF;
-        height: 260px;
-    
+    #subscribe,
+    #subscribe-footer {
+        background-color: #f7eeff;
+        height: 170px;
+
         .subscribe-text {
-            color: #AB53FF;
+            color: #ab53ff;
             font-size: 40px;
             font-weight: 600;
         }
@@ -386,5 +441,9 @@ html, body {
             margin-top: -45px;
             width: 8%;
         }
+    }
+    .p-lg {
+        padding-left: 3em;
+        padding-right: 3em;
     }
 }
