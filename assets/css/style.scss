@@ -47,6 +47,10 @@ body {
     display: none;
 }
 
+// .thanks-div-footer {
+//     display: none;
+// }
+
 .thanks-div-show {
     display: block;
     background-color: #f7eeff;
@@ -148,8 +152,21 @@ body {
         }
     }
 }
+
+.snapchat-img {
+    width: 50%;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
 // Small devices (extra small devices)
-@media (max-width: 360px) {
+@media (max-width: 391px) {
     .thanks-div-show {
         display: block;
         background-color: #f7eeff;
@@ -177,6 +194,15 @@ body {
     }
     button {
         font-size: 12px !important;
+    }
+    .snapchat-img {
+       width: 80%;
+    }
+    #gifting-experience {
+        margin-bottom: 50px;
+    }
+    #gifting-value {
+        margin-bottom: 0px;
     }
 }
 // Small devices (landscape phones, 576px and up)
@@ -274,6 +300,12 @@ body {
         font-size: 25px;
         font-weight: 400;
     }
+    .snapchat-img {
+        width: 70%;
+    }
+    #gifting-value {
+        margin-bottom: 50px;
+    }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -297,6 +329,12 @@ body {
             margin-top: -45px;
             width: 15%;
         }
+    }
+    .snapchat-img {
+        width: 70%;
+    }
+    #gifting-value {
+        margin-bottom: 100px;
     }
 }
 
@@ -406,6 +444,12 @@ body {
         padding-left: 3em;
         padding-right: 3em;
     }
+    .snapchat-img {
+        width: 50%;
+    }
+    #gifting-value {
+        margin-bottom: 100px;
+    }
 }
 
 // X-Large devices (large desktops, 1200px and up)
@@ -434,6 +478,12 @@ body {
     .p-lg {
         padding-left: 3em;
         padding-right: 3em;
+    }
+    .snapchat-img {
+        width: 50%;
+    }
+    #gifting-value {
+        margin-bottom: 100px;
     }
 }
 
@@ -475,5 +525,12 @@ body {
     .p-lg {
         padding-left: 3em;
         padding-right: 3em;
+    }
+    .snapchat-img {
+        width: 50%;
+    }
+
+    #gifting-value {
+        margin-bottom: 100px;
     }
 }
