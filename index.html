@@ -26,10 +26,10 @@
                 success: function (response) {
                     // handle the successful response from the Mailchimp API
                     // alert(response)
-                    var subscribe = document.getElementById("subscribe");
-                    var subscribeFooter = document.getElementById("subscribe-footer");
-                    subscribe.classList.add("no-show");
-                    subscribeFooter.classList.add("no-show");
+                    // var subscribe = document.getElementById("subscribe");
+                    // var subscribeFooter = document.getElementById("subscribe-footer");
+                    // subscribe.classList.add("no-show");
+                    // subscribeFooter.classList.add("no-show");
                     if (document.getElementById('email-field') && document.getElementById('email-field').value) {
                         document.getElementById('email-field').value = "Your email has been submitted.";
                         var thanks = document.getElementById("thanks");
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div id="thanks" class="thanks-div">
-                <p class="mt-2 text-center subscribe-text">Your email has been submitted.</p>
+                <p class="text-center email-submission-text">Your email has been submitted.</p>
             </div>
         </section>
         <section id="current-features">
@@ -201,7 +201,7 @@
         <section id="footer-container">
             <section id="subscribe-footer" class="row subscribe g-0">
                 <div class="col-lg-5 align-self-center px-5 mt-2">
-                    <p class="subscribe-text text-center text-lg-left">Get updates and $10 gifting value at launch</p>
+                    <p class="subscribe-text">Get updates and $10 gifting value at launch</p>
                 </div>
                 <div class="col-lg-7 align-self-center px-5">
                     <form action="#" onsubmit="event.preventDefault(); submitData()">
@@ -216,7 +216,7 @@
                 </div>
             </section>
             <div id="thanks-footer" class="thanks-div">
-                <p class="text-center subscribe-text">Your email has been submitted.</p>
+                <p class="text-center email-submission-text">Your email has been submitted.</p>
             </div>
         </section>
 
