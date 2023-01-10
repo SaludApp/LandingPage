@@ -10,42 +10,109 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        function submitData() {
-            $.ajax({
-                url: 'https://eo6vxboq0h2ufih.m.pipedream.net',
-                type: 'POST',
-                // dataType: 'json',
-                contentType: 'application/json',
-                headers: {
-                    'Authorization': 'apikey 123456'
-                },
-                data: {
-                    "email_address": document.getElementById('email-field') && document.getElementById('email-field').value ? document.getElementById('email-field').value : document.getElementById('email-field-footer').value,
-                    "status": "subscribed"
-                },
-                success: function (response) {
-                    // handle the successful response from the Mailchimp API
-                    // alert(response)
-                    // var subscribe = document.getElementById("subscribe");
-                    // var subscribeFooter = document.getElementById("subscribe-footer");
-                    // subscribe.classList.add("no-show");
-                    // subscribeFooter.classList.add("no-show");
-                    if (document.getElementById('email-field') && document.getElementById('email-field').value) {
-                        document.getElementById('email-field').value = "Your email has been submitted.";
-                        var thanks = document.getElementById("thanks");
-                        thanks.classList.remove("thanks-div");
-                        thanks.classList.add("thanks-div-show");
-                    } else {
-                        var thanks = document.getElementById("thanks-footer");
-                        thanks.classList.remove("thanks-div");
-                        thanks.classList.add("thanks-div-show");
+        function make_base_auth(user, password) {
+            var tok = user + ':' + password;
+            var hash = btoa(tok);
+            return 'Basic ' + hash;
+        }
+        function hideResponseDiv() {
+            var thanks = document.getElementById('thanks');
+            thanks.classList.add("thanks-div");
+            thanks.classList.remove("thanks-div-show");
+
+            var thanksFooter = document.getElementById('thanks-footer');
+            thanksFooter.classList.add('thanks-div');
+            thanksFooter.classList.remove("thanks-div-show");
+
+            var alreadyExist = document.getElementById('alreadyExist');
+            alreadyExist.classList.add("thanks-div");
+            alreadyExist.classList.remove("thanks-div-show");
+
+            var alreadyExistFooter = document.getElementById('alreadyExistFooter');
+            alreadyExistFooter.classList.add("thanks-div");
+            alreadyExistFooter.classList.remove("thanks-div-show");
+
+            var fakeEmail = document.getElementById('fakeEmail');
+            fakeEmail.classList.add("thanks-div");
+            fakeEmail.classList.remove("thanks-div-show");
+
+            var fakeEmailFooter = document.getElementById('fakeEmailFooter');
+            fakeEmailFooter.classList.add("thanks-div");
+            fakeEmailFooter.classList.remove("thanks-div-show");
+        }
+        function showDiv(id) {
+            var thanks = document.getElementById(id);
+            thanks.classList.remove("thanks-div");
+            thanks.classList.add("thanks-div-show");
+        }
+
+        function submitData(id) {
+            if (id === 'lower-form') {
+                $.ajax({
+                    url: 'https://lpbackened.herokuapp.com/subscribe',
+                    type: 'POST',
+                    // dataType: 'json',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'json',
+                    data: JSON.stringify({
+                        "email_address": document.getElementById('email-field-footer') && document.getElementById('email-field-footer').value ? document.getElementById('email-field-footer').value : '',
+                    }),
+                    success: function (response) {
+                        hideResponseDiv();
+                        if (document.getElementById('email-field-footer') && document.getElementById('email-field-footer').value) {
+                            document.getElementById('email-field-footer').value = "";
+                            showDiv('thanks-footer')
+                        }
+                    },
+                    error: function (error) {
+                        // handle the error error from the Mailchimp API
+                        hideResponseDiv();
+                        if (document.getElementById('email-field-footer') && document.getElementById('email-field-footer').value) {
+                            if (!error.responseJSON.success) {
+                                if (error.responseJSON.data.title === 'Member Exists') {
+                                    showDiv('alreadyExistFooter')
+                                }
+                                else if (error.responseJSON.data.title === 'Invalid Resource') {
+                                    showDiv('fakeEmailFooter')
+                                }
+                            }
+                        }
                     }
-                },
-                error: function (response) {
-                    // handle the error response from the Mailchimp API
-                    console.log(response)
-                }
-            });
+                });
+            } else {
+                $.ajax({
+                    url: 'https://lpbackened.herokuapp.com/subscribe',
+                    type: 'POST',
+                    // dataType: 'json',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'json',
+                    data: JSON.stringify({
+                        "email_address": document.getElementById('email-field') && document.getElementById('email-field').value ? document.getElementById('email-field').value : '',
+                    }),
+                    success: function (response) {
+                        hideResponseDiv();
+                        if (document.getElementById('email-field') && document.getElementById('email-field').value) {
+                            document.getElementById('email-field').value = "";
+                            showDiv('thanks')
+                        }
+                    },
+                    error: function (error) {
+                        // handle the error error from the Mailchimp API
+                        hideResponseDiv();
+                        if (document.getElementById('email-field') && document.getElementById('email-field').value) {
+                            if (!error.responseJSON.success) {
+                                if (error.responseJSON.data.title === 'Member Exists') {
+                                    showDiv('alreadyExist');
+                                }
+                                else if (error.responseJSON.data.title === 'Invalid Resource') {
+                                    showDiv('fakeEmail');
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
         }
     </script>
 </head>
@@ -69,7 +136,7 @@
                     <p class="subscribe-text">Get updates and $10 gifting value at launch</p>
                 </div>
                 <div class="col-lg-7 align-self-center px-5">
-                    <form action="#" onsubmit="event.preventDefault(); submitData()">
+                    <form action="#" onsubmit="event.preventDefault(); submitData('upper-form')">
                         <div class="input-group mb-3">
                             <input id="email-field" type="text" class="form-control subscribe-form-control"
                                 placeholder="Your email address" aria-label="Your email address"
@@ -82,6 +149,12 @@
             </div>
             <div id="thanks" class="thanks-div">
                 <p class="text-center email-submission-text">Your email has been submitted.</p>
+            </div>
+            <div id="alreadyExist" class="thanks-div">
+                <p class="text-center email-submission-text">Email already submitted.</p>
+            </div>
+            <div id="fakeEmail" class="thanks-div">
+                <p class="text-center email-submission-text">Entered email is fake or invalid.</p>
             </div>
         </section>
         <section id="current-features">
@@ -204,7 +277,7 @@
                     <p class="subscribe-text">Get updates and $10 gifting value at launch</p>
                 </div>
                 <div class="col-lg-7 align-self-center px-5">
-                    <form action="#" onsubmit="event.preventDefault(); submitData()">
+                    <form action="#" onsubmit="event.preventDefault(); submitData('lower-form')">
                         <div class="input-group mb-3">
                             <input id="email-field-footer" type="text" class="form-control subscribe-form-control"
                                 placeholder="Your email address" aria-label="Your email address"
@@ -218,16 +291,26 @@
             <div id="thanks-footer" class="thanks-div">
                 <p class="text-center email-submission-text">Your email has been submitted.</p>
             </div>
+            <div id="alreadyExistFooter" class="thanks-div">
+                <p class="text-center email-submission-text">Email already submitted.</p>
+            </div>
+            <div id="fakeEmailFooter" class="thanks-div">
+                <p class="text-center email-submission-text">Entered email is fake or invalid.</p>
+            </div>
         </section>
 
         <footer class="row py-5 g-0" style="background-color: #AB53FF;">
             <h4 class="col-md-12 text-center p-5" style="color: white; font-size: 30px">Follow us to get updates and
                 keep in touch!</h4>
             <div class="col-md-12 text-center pb-5">
-                <a href="https://www.facebook.com/saludgift" target="_blank"><img class="img-fluid" src="assets/imgs/fb.png" style="width: 90px;" alt="Facebook"></a>
-                <a href="https://www.instagram.com/salud.gift/" target="_blank"><img class="img-fluid" src="assets/imgs/insta.png" style="width: 90px;" alt="Instagram"></a>
-                <a href="https://www.snapchat.com/add/salud.app" target="_blank"><img class="img-fluid" src="assets/imgs/snap.png" style="width: 90px;" alt="Snapchat"></a>
-                <a href="https://www.tiktok.com/@salud.app?_t=8Ye1bqOAyNu&_r=1" target="_blank"><img class="img-fluid" src="assets/imgs/tiktok.png" style="width: 90px;" alt="Tiktok"></a>
+                <a href="https://www.facebook.com/saludgift" target="_blank"><img class="img-fluid"
+                        src="assets/imgs/fb.png" style="width: 90px;" alt="Facebook"></a>
+                <a href="https://www.instagram.com/salud.gift/" target="_blank"><img class="img-fluid"
+                        src="assets/imgs/insta.png" style="width: 90px;" alt="Instagram"></a>
+                <a href="https://www.snapchat.com/add/salud.app" target="_blank"><img class="img-fluid"
+                        src="assets/imgs/snap.png" style="width: 90px;" alt="Snapchat"></a>
+                <a href="https://www.tiktok.com/@salud.app?_t=8Ye1bqOAyNu&_r=1" target="_blank"><img class="img-fluid"
+                        src="assets/imgs/tiktok.png" style="width: 90px;" alt="Tiktok"></a>
             </div>
         </footer>
     </div>
