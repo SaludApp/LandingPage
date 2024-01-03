@@ -3,12 +3,14 @@ html,
 body {
   font-family: "Outfit", system-ui, sans-serif;
   overflow-x: hidden;
+  background-color: #1d1d1d;
 }
 
 #cover {
-  background-image: radial-gradient(763px 796px at 15rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+  background-image: radial-gradient(circle at 15rem center, rgba(255, 255, 255, 0.52) 0%, rgb(255, 255, 255) 60%);
   background-repeat: no-repeat;
   padding-top: 4rem;
+  background-color: #fff;
 }
 
 .salud-logo {
@@ -37,9 +39,9 @@ body {
   height: 260px;
 }
 
-#subscribe {
+/* #subscribe {
   margin-top: 50px;
-}
+} */
 
 .no-show {
   display: none;
@@ -88,7 +90,7 @@ body {
   background: #ab53ff;
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 18px !important;
   line-height: 38px;
   color: #ffffff;
 }
@@ -182,8 +184,30 @@ body {
 .mb-50 {
   margin-bottom: 50px !important;
 }
+.qrcode {
+  width: 110px;
+}
 
-@media (max-width: 391px) {
+.appbtn-container{
+  margin-top: -140px;
+}
+.legal-text-section{
+  background-color: #fff;
+}
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: -25px;
+  border-radius: 60px;
+}
+@media (min-width: 300px) {
+  .salud-logo {
+    width: 80%;
+  }
+  
+}
+@media (min-width: 391px) {
+  .salud-logo {
+    width: 80%;
+  }
   .thanks-div-show {
     display: block;
     background-color: #f7eeff;
@@ -226,6 +250,9 @@ body {
   }
 }
 @media (min-width: 576px) {
+  .salud-logo {
+    width: 35%;
+  }
   #cover {
     background-image: radial-gradient(763px 696px at 20rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
     background-repeat: no-repeat;
@@ -248,7 +275,7 @@ body {
     color: rgba(0, 0, 0, 0.6);
   }
   #subscribe {
-    margin-top: 50px;
+    margin-top: 25px;
   }
   #coming-soon .coming-soon-image {
     position: absolute;
@@ -279,7 +306,7 @@ body {
     background: #ab53ff;
     font-style: normal;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 25px !important;
     line-height: 38px;
     color: #ffffff;
   }
@@ -332,9 +359,9 @@ body {
     background-repeat: no-repeat;
     padding-top: 4rem;
   }
-  #subscribe {
+  /* #subscribe {
     margin-top: 50px;
-  }
+  } */
   #coming-soon .coming-soon-image {
     position: absolute;
     margin-top: -45px;
@@ -345,6 +372,10 @@ body {
   }
   #gifting-value {
     margin-bottom: 100px;
+  }
+  .qrcode-section {
+    margin-top: 2rem!important;
+    margin-bottom: 2rem!important;
   }
 }
 @media (min-width: 992px) {
@@ -365,9 +396,9 @@ body {
     font-size: 30px;
     color: rgba(0, 0, 0, 0.6);
   }
-  #subscribe {
+  /* #subscribe {
     margin-top: 50px;
-  }
+  } */
   #coming-soon .coming-soon-image {
     position: absolute;
     margin-top: -45px;
@@ -397,7 +428,7 @@ body {
     background: #ab53ff;
     font-style: normal;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 25px !important;
     line-height: 38px;
     color: #ffffff;
   }
@@ -436,7 +467,7 @@ body {
   }
   #subscribe {
     position: relative;
-    margin-top: -100px;
+    margin-top: 0;
     z-index: 9;
   }
   #coming-soon .coming-soon-image {
@@ -453,6 +484,9 @@ body {
   }
   #gifting-value {
     margin-bottom: 100px;
+  }
+  .qrcode-section {
+    margin-top: 2rem!important;
   }
 }
 @media (min-width: 1200px) {
@@ -518,5 +552,9 @@ body {
   }
   #gifting-value {
     margin-bottom: 100px;
+  }
+  .qrcode-section {
+    margin-top: 3rem!important;
+    margin-bottom: 3rem!important;
   }
 }/*# sourceMappingURL=style.css.map */
