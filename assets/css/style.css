@@ -188,15 +188,16 @@ body {
   width: 110px;
 }
 
-.appbtn-container{
-  margin-top: -140px;
-}
 .legal-text-section{
   background-color: #fff;
 }
 .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
   margin-left: -25px;
   border-radius: 60px;
+}
+.app-mockup{
+  width: 80%;
+  display: flex;
 }
 @media (min-width: 300px) {
   .salud-logo {
