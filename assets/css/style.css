@@ -147,6 +147,10 @@ body {
   margin-bottom: 50px;
 }
 
+#card-value {
+  margin-bottom: 200px;
+}
+
 #coming-soon {
   background: linear-gradient(90deg, rgb(84, 73, 218) 0%, rgb(126, 73, 207) 50%, rgb(180, 74, 192) 100%);
   color: #fff;
@@ -378,6 +382,9 @@ body {
     margin-top: 2rem!important;
     margin-bottom: 2rem!important;
   }
+  .app-mockup{
+    width: 50%;
+  }
 }
 @media (min-width: 992px) {
   #cover {
@@ -489,6 +496,9 @@ body {
   .qrcode-section {
     margin-top: 2rem!important;
   }
+  .app-mockup{
+    width: 50%;
+  }
 }
 @media (min-width: 1200px) {
   #cover {
@@ -515,6 +525,9 @@ body {
   }
   #gifting-value {
     margin-bottom: 100px;
+  }
+  .app-mockup{
+    width: 50%;
   }
 }
 @media (min-width: 1400px) {
@@ -557,5 +570,8 @@ body {
   .qrcode-section {
     margin-top: 3rem!important;
     margin-bottom: 3rem!important;
+  }
+  .app-mockup{
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
