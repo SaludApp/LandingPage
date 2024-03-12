@@ -13,6 +13,7 @@ body {
   background-color: #fff;
 }
 
+
 .salud-logo {
   width: 100%;
 }
@@ -204,12 +205,22 @@ body {
   display: flex;
 }
 @media (min-width: 300px) {
+  #cover {
+    background-image: radial-gradient(763px 696px at 15rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+    background-repeat: no-repeat;
+    padding-top: 4rem;
+  }
   .salud-logo {
     width: 80%;
   }
   
 }
 @media (min-width: 391px) {
+  #cover {
+    background-image: radial-gradient(763px 696px at 15rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+    background-repeat: no-repeat;
+    padding-top: 4rem;
+  }
   .salud-logo {
     width: 80%;
   }
@@ -255,6 +266,11 @@ body {
   }
 }
 @media (min-width: 576px) {
+  #cover {
+    background-image: radial-gradient(763px 696px at 15rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+    background-repeat: no-repeat;
+    padding-top: 4rem;
+  }
   .salud-logo {
     width: 35%;
   }
@@ -360,7 +376,7 @@ body {
 }
 @media (min-width: 768px) {
   #cover {
-    background-image: radial-gradient(763px 696px at 50rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
+    background-image: radial-gradient(763px 696px at 15rem center, rgba(255, 252, 0, 0.52) 0%, rgb(255, 255, 255) 60%);
     background-repeat: no-repeat;
     padding-top: 4rem;
   }
